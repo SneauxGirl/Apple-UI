@@ -28,7 +28,7 @@ body, html{
     flex-wrap: wrap;
     gap: 2rem;
 }
-?
+
 @media screen and (min-width: 460px) {
     .header__left-column {
         padding-right: 5rem;
@@ -267,7 +267,7 @@ body, html{
     z-index: 0;
 }
 
-@media screen and (min-width: 1200pm) {
+@media screen and (min-width: 1200px) {
     .hero__image img {
         position: absolute;
         top: 0;
