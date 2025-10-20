@@ -215,3 +215,43 @@ body, html{
         justify-content: flex-start;
     }
 }
+
+.hero__orderbutton {
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.25rem;
+    color: #fff;
+    background: linear-gradient(90deg, rgb(203, 101, 16) 0%, rgb(34, 25, 217) 100%);
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: background 0.3s ease-in-out;
+    margin-top: 3rem;    
+}
+
+.hero__orderbutton:hover {
+    background: linear-gradient(90deg, rgb(203, 101, 16) 0%, rgb(34, 25, 217) 100%);
+    opacity: 0.8;
+}
+
+.hero__playbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 0.5rem 0.65rem;
+    border: 2px solid #bbbbbb;
+    border-radius: 50%;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+    margin-top: 3rem;
+}
+
+.hero__playbutton i:before {
+    position: relative;
+    left: 1px;  
+}
+.hero__playbutton:hover {
+    background: rgba (255, 255, 255, 0.3);
+}
