@@ -90,15 +90,15 @@ body, html{
     cursor: pointer;
 }
 
-/*  CART Icon */
-.cart__icon {
+/*  CART Icon: WHY -vs __*/
+.cart-icon {
     position: relative;
     display: inline-block; /* equivalent of image being text wrapped */
     text-decoration: none;
     color: inherit;
 }
 
-.cart__count {
+.cart-count {
     position: absolute;
     top: -10px;
     right: -10px;
@@ -108,7 +108,8 @@ body, html{
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
 }
-.cart__count:hover {
+
+.cart-count:hover {
     background: #959595;
     cursor: pointer;
 }
@@ -424,4 +425,61 @@ max-height: 700px;
 @keyframes slideIn {
     from {top: -300px; opacity: 0;}
     to {top: 0; opacity: 1;}
+}
+
+/* BASKET DROPDOWN */
+.basket-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #bbbbbb;
+    border: 1px solid #434343;
+    border-radius: 8px;
+    z-index: 1000;
+    animation: dropdown 0.3s ease-in-out;
+}
+
+.basket-dropdown:target,
+.cart-icon-wrapper:hover .basket-dropdown {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.basket-dropdown .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.25rem;
+    color: #bbbbbb;
+    text-decoration: none;
+}
+
+.basket-dropdown .basket-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.basket-dropdown .basket-item img {
+    width: 50px;
+}
+
+.basket-dropdown .basket-item-details h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.basket-dropdown .basket-item-details p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+@keyframes dropdown {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
 }
