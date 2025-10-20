@@ -43,6 +43,7 @@ body, html{
     }
 }
 
+/* what is position initial modifying and why was it split out below header__right-column on original code? */
 @media screen and (min-width: 1200px) {
     .header__left-column {
         position: initial;
@@ -92,7 +93,7 @@ body, html{
 /*  CART Icon */
 .cart__icon {
     position: relative;
-    display: inline-block;
+    display: inline-block; /* equivalent of image being text wrapped */
     text-decoration: none;
     color: inherit;
 }
@@ -129,7 +130,7 @@ body, html{
     color: rgba(127, 123, 123, 0.62);
 }
 
-/* Fade-In Animations */
+/* Fade-In Animations - affect all fadeIns on page, what are keyframes */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -159,12 +160,12 @@ body, html{
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 1s forwards;
-    animation-delay: 0.2s; /* may need to play with this*/
+    animation-delay: 0.2s;
 }
 
 @media screen and (min-width: 1200px) {
     .hero {
-        flex-direction: row-reverse;
+        flex-direction: row-reverse; /* moves img from top to right of text on <1200px */
     }
 }
 
@@ -176,7 +177,7 @@ body, html{
 
 @media screen and (min-width: 600px){
     .hero__text {
-        text-align: left;
+        text-align: left; /* vs center for mobile */
     }
 }
 
@@ -212,7 +213,7 @@ body, html{
 
 @media screen and (min-width: 600px) {
     .hero__buttons {
-        justify-content: flex-start;
+        justify-content: flex-start; /* pulls buttons from center/center to upper left on <600 */
     }
 }
 
@@ -277,3 +278,57 @@ body, html{
     }
 }
 
+/*SPECS */
+.specs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 4rem;
+    max-width: 1200px;
+    margin: 2rem auto 6rem auto;
+    gap: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.4s;
+}
+
+@media screen and (min-width: 1100px) {
+    .specs {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+    }
+}
+
+.spec {
+    text-align: center;
+    border-right: none;
+}
+
+@media screen and (min-width: 1100px) {
+    .spec {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        padding-right: 3rem;
+    }
+
+    .spec:last-of-type {
+    padding-right: 0;
+    }
+}
+/* work on last of type v last child use cases - why these assigned differently */
+.spec:last-child {
+    border-right: none;
+}
+
+.spec__title {
+    font-size: 2.25rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.spec__description {
+    font-size: 1.75rem;
+    font-weight: 200;
+    margin-top: 0.5rem;
+}
