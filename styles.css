@@ -28,7 +28,7 @@ body, html{
     flex-wrap: wrap;
     gap: 2rem;
 }
-
+?
 @media screen and (min-width: 460px) {
     .header__left-column {
         padding-right: 5rem;
@@ -255,3 +255,25 @@ body, html{
 .hero__playbutton:hover {
     background: rgba (255, 255, 255, 0.3);
 }
+
+.hero__image {
+    width: 100%;
+    max-width: 800px;
+}
+
+.hero__image img {
+    position: initial;
+    width: 100%;
+    z-index: 0;
+}
+
+@media screen and (min-width: 1200pm) {
+    .hero__image img {
+        position: absolute;
+        top: 0;
+        height: auto;
+        right: -600px;
+        width: 1400px;
+    }
+}
+
