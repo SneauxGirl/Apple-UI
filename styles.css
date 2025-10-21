@@ -599,3 +599,31 @@ max-height: 700px;
 .footer__bottom a:hover {
     text-decoration: underline;
 }
+
+/* consider breaking these up so copyright breaks on a separate line from other elements */
+.footer__legal {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+    .footer__legal {
+        justify-content: flex-start;
+    }
+}
+
+.footer__legal span {
+    color: #bbb;
+}
+
+.footer__legal a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer__legal a:hover {
+    text-decoration: underline;
+}
