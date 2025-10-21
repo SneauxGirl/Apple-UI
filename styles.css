@@ -20,6 +20,7 @@ body, html{
     max-width: 1200px;
     color: #bbbbbb;
 }
+
 .header__left-column {
     display: flex;
     align-items: center;
@@ -32,8 +33,7 @@ body, html{
 @media screen and (min-width: 460px) {
     .header__left-column {
         padding-right: 5rem;
-        justify-content: center;
-        padding-right: 10rem;
+        /* removed padding-right: 10rem; for better basket visibility on mobile */
     }
 }
 
@@ -68,14 +68,17 @@ body, html{
     margin-left: 0.5rem;
     font-size: 1.4rem;
     padding-top: 0.25rem;
-    font-weight: 100%;
+    font-weight: 100;
 }
 
 .header__right-column {
     display: flex;
-    position: relative;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    align-items: center;
     /* right: 2rem;
-    top: 2rem;*/
+    top: 2rem; - took these out and made relative but don't remember why*/
     padding-top: 0.5rem;
     gap: 1rem;
 }
@@ -89,6 +92,11 @@ body, html{
     cursor: pointer;
 }
 
+@media screen and (min-width: 1200px) {
+    .header__left-column {
+        position: initial;
+    }
+}
 /*  CART Icon: WHY -vs __*/
 .cart-icon {
     position: relative;
