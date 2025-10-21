@@ -517,7 +517,6 @@ max-height: 700px;
     text-decoration: underline;
 }
 
-/*wrap isn't wrapping correctly between 600-1200 - figure out why*/
 .footer__middle {
     display: flex;
     flex-direction: column;
