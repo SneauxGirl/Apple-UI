@@ -487,7 +487,6 @@ max-height: 700px;
 .footer {
     background-color: rgba(0, 0, 0, 0.1);
     color: #bbb;
-    padding: 2rem;
     padding: 2rem 1rem;
 }
 .footer__container {
@@ -522,7 +521,7 @@ max-height: 700px;
 .footer__middle {
     display: flex;
     flex-direction: column;
-    flex-direction: wrap;
+    flex-wrap: wrap;
     text-align: center;
     gap: 1rem;
     margin-bottom: 1rem;
